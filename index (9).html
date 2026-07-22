@@ -1,0 +1,1130 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Halls & Wallets — Student Money Deals, UK-Wide</title>
+<meta name="description" content="UK-wide student deals: banking switch bonuses, broadband, housing help, and gym discounts, checked and explained in one place.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://hallsandwallets.co.uk/">
+
+<!-- Open Graph / social preview -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Halls & Wallets">
+<meta property="og:title" content="Halls & Wallets — Student Money Deals, UK-Wide">
+<meta property="og:description" content="Student bank overdrafts, broadband, housing help, and gym rates — the student deals worth your time, checked so you don't have to dig for them.">
+<meta property="og:image" content="https://hallsandwallets.co.uk/social-preview.png">
+<meta property="og:url" content="https://hallsandwallets.co.uk/">
+
+<!-- Twitter / X card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Halls & Wallets — Student Money Deals, UK-Wide">
+<meta name="twitter:description" content="Student bank overdrafts, broadband, housing help, and gym rates — checked for students, all in one place.">
+<meta name="twitter:image" content="https://hallsandwallets.co.uk/social-preview.png">
+
+<!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="alternate icon" href="favicon.svg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;500;600;700&family=Caveat:wght@600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#16213E;
+    --ink-deep:#0E1530;
+    --cork:#9C6B45;
+    --cork-dark:#7A5233;
+    --paper:#FBF6EC;
+    --paper-shadow:#E8DFC8;
+    --highlight:#F5D90A;
+    --highlight-deep:#D8BE00;
+    --charcoal:#232323;
+    --muted:#5B6478;
+    --pin-red:#D64545;
+    --pin-teal:#2E8B8B;
+    --pin-purple:#7B5EA7;
+    --pin-orange:#E08A2E;
+  }
+
+  *{box-sizing:border-box; margin:0; padding:0;}
+
+  html{scroll-behavior:smooth;}
+
+  body{
+    background:var(--ink);
+    color:var(--charcoal);
+    font-family:'Space Grotesk', sans-serif;
+    line-height:1.5;
+  }
+
+  a{color:inherit; text-decoration:none;}
+
+  .display{font-family:'Archivo Black', sans-serif;}
+  .hand{font-family:'Caveat', cursive;}
+  .mono{font-family:'JetBrains Mono', monospace;}
+
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important;}
+  }
+
+  /* ===== NAV ===== */
+  .nav{
+    position:sticky; top:0; z-index:100;
+    background:var(--ink-deep);
+    border-bottom:3px solid var(--highlight);
+    padding:14px 5vw;
+    display:flex; align-items:center; justify-content:space-between;
+  }
+  .nav-logo{
+    color:var(--paper);
+    font-size:1.3rem;
+    letter-spacing:0.5px;
+  }
+  .nav-logo span{color:var(--highlight);}
+  .nav-links{display:flex; gap:28px; list-style:none;}
+  .nav-links a{
+    color:var(--paper);
+    font-weight:600;
+    font-size:0.95rem;
+    opacity:0.85;
+    transition:opacity 0.2s;
+  }
+  .nav-links a:hover{opacity:1; color:var(--highlight);}
+  .nav-links a:focus-visible, .btn:focus-visible, .deal-cta:focus-visible{
+    outline:3px solid var(--highlight); outline-offset:2px;
+  }
+  .nav-toggle{display:none;}
+
+  @media (max-width:720px){
+    .nav-links{display:none;}
+  }
+
+  /* ===== HERO / CORKBOARD ===== */
+  .hero{
+    background:
+      repeating-linear-gradient(45deg, rgba(0,0,0,0.035) 0 2px, transparent 2px 6px),
+      radial-gradient(circle at 20% 30%, rgba(0,0,0,0.08), transparent 40%),
+      radial-gradient(circle at 80% 70%, rgba(0,0,0,0.08), transparent 40%),
+      var(--cork);
+    padding:70px 5vw 90px;
+    position:relative;
+    overflow:hidden;
+    border-bottom:8px solid var(--cork-dark);
+  }
+  .hero-intro{
+    max-width:640px;
+    margin:0 auto 50px;
+    text-align:center;
+  }
+  .hero-eyebrow{
+    display:inline-block;
+    background:var(--highlight);
+    color:var(--ink-deep);
+    font-weight:700;
+    font-size:0.8rem;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    padding:5px 14px;
+    border-radius:3px;
+    margin-bottom:18px;
+    transform:rotate(-2deg);
+  }
+  .hero-title{
+    color:var(--paper);
+    font-size:clamp(2.2rem, 5vw, 3.6rem);
+    line-height:1.05;
+    text-shadow:2px 2px 0 rgba(0,0,0,0.2);
+  }
+  .hero-title em{
+    font-style:normal;
+    color:var(--highlight);
+  }
+  .hero-sub{
+    color:var(--paper);
+    opacity:0.9;
+    font-size:1.1rem;
+    margin-top:18px;
+    font-weight:500;
+  }
+
+  .board{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+    gap:28px;
+    max-width:1180px;
+    margin:0 auto;
+  }
+  @media (max-width:980px){
+    .board{grid-template-columns:repeat(2, 1fr);}
+  }
+  @media (max-width:560px){
+    .board{grid-template-columns:1fr;}
+  }
+
+  .flyer{
+    background:var(--paper);
+    padding:22px 20px 24px;
+    box-shadow:0 10px 20px rgba(0,0,0,0.25);
+    position:relative;
+    cursor:pointer;
+    border:none;
+    text-align:left;
+    font:inherit;
+    color:inherit;
+    transition:transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  .flyer:nth-child(1){transform:rotate(-3deg);}
+  .flyer:nth-child(2){transform:rotate(2deg);}
+  .flyer:nth-child(3){transform:rotate(-1.5deg);}
+  .flyer:nth-child(4){transform:rotate(2.5deg);}
+  .flyer:nth-child(5){transform:rotate(-2deg);}
+  .flyer:nth-child(6){transform:rotate(1.5deg);}
+  .flyer:nth-child(7){transform:rotate(-2.5deg);}
+  .flyer:hover, .flyer:focus-visible{
+    transform:rotate(0deg) translateY(-6px) scale(1.03);
+    box-shadow:0 16px 30px rgba(0,0,0,0.32);
+    outline:none;
+  }
+  .pin{
+    position:absolute;
+    top:-11px; left:50%;
+    transform:translateX(-50%);
+    width:22px; height:22px;
+    border-radius:50%;
+    box-shadow:0 3px 5px rgba(0,0,0,0.4), inset 0 -3px 4px rgba(0,0,0,0.25);
+  }
+  .flyer:nth-child(1) .pin{background:var(--pin-red);}
+  .flyer:nth-child(2) .pin{background:var(--pin-teal);}
+  .flyer:nth-child(3) .pin{background:var(--pin-purple);}
+  .flyer:nth-child(4) .pin{background:var(--pin-orange);}
+  .flyer:nth-child(5) .pin{background:var(--pin-teal);}
+  .flyer:nth-child(6) .pin{background:var(--pin-purple);}
+  .flyer:nth-child(7) .pin{background:var(--pin-red);}
+
+  .flyer-icon{font-size:2.1rem; margin-bottom:8px; display:block;}
+  .flyer-title{font-size:1.25rem; margin-bottom:6px;}
+  .flyer-count{
+    font-size:0.85rem;
+    color:var(--muted);
+    font-weight:500;
+  }
+  .flyer-count b{color:var(--charcoal);}
+
+  /* ===== SECTIONS ===== */
+  .section{
+    background:var(--paper);
+    padding:70px 5vw;
+    border-bottom:1px solid var(--paper-shadow);
+  }
+  .section:nth-of-type(even){background:#F4EEDD;}
+
+  .section-head{
+    max-width:1180px;
+    margin:0 auto 36px;
+    display:flex;
+    align-items:baseline;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:12px;
+    border-bottom:3px solid var(--ink);
+    padding-bottom:16px;
+  }
+  .section-label{
+    font-size:0.85rem;
+    text-transform:uppercase;
+    letter-spacing:1.5px;
+    color:var(--muted);
+    font-weight:700;
+  }
+  .section-title{font-size:2rem;}
+  .section-note{
+    font-size:0.95rem;
+    color:var(--muted);
+    max-width:420px;
+  }
+
+  .deals-grid{
+    max-width:1180px;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+    gap:22px;
+  }
+
+  .deal-card{
+    background:#fff;
+    border:2px solid var(--ink);
+    border-radius:4px;
+    padding:22px;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    position:relative;
+    transition:box-shadow 0.2s ease;
+  }
+  .deal-card:hover{box-shadow:6px 6px 0 var(--ink);}
+
+  .deal-top{display:flex; justify-content:space-between; align-items:flex-start; gap:10px;}
+  .deal-provider{font-size:1.1rem; font-weight:700;}
+  .deal-tag{
+    background:var(--ink);
+    color:var(--paper);
+    font-size:0.72rem;
+    text-transform:uppercase;
+    letter-spacing:0.5px;
+    padding:4px 9px;
+    border-radius:20px;
+    white-space:nowrap;
+    font-weight:600;
+  }
+  .deal-tag.hot{background:var(--pin-red);}
+  .deal-tag.recurring{background:var(--pin-teal);}
+
+  .deal-value{
+    font-size:1.6rem;
+    color:var(--ink);
+  }
+  .deal-value .hand{color:var(--pin-orange); font-size:1.9rem;}
+
+  .deal-desc{font-size:0.92rem; color:var(--muted); flex-grow:1;}
+
+  .deal-meta{
+    font-size:0.82rem;
+    color:var(--muted);
+    border-top:1px dashed var(--paper-shadow);
+    padding-top:10px;
+  }
+  .deal-meta b{color:var(--charcoal);}
+
+  .deal-cta{
+    margin-top:6px;
+    display:inline-block;
+    text-align:center;
+    background:var(--highlight);
+    color:var(--ink-deep);
+    font-weight:700;
+    padding:10px 16px;
+    border-radius:3px;
+    font-size:0.9rem;
+    transition:background 0.2s;
+  }
+  .deal-cta:hover{background:var(--highlight-deep);}
+
+  .ad-tag{
+    display:inline-block;
+    font-size:0.68rem;
+    color:var(--muted);
+    border:1px solid var(--paper-shadow);
+    padding:2px 7px;
+    border-radius:10px;
+    margin-left:6px;
+    vertical-align:middle;
+    letter-spacing:0.5px;
+  }
+
+  .updated{
+    font-size:0.75rem;
+    color:var(--muted);
+    margin-top:4px;
+  }
+
+  /* ===== TRUST / HOW STRIP ===== */
+  .how{
+    background:var(--ink);
+    color:var(--paper);
+    padding:60px 5vw;
+    text-align:center;
+  }
+  .how-title{font-size:1.8rem; margin-bottom:36px;}
+  .how-grid{
+    max-width:900px;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:30px;
+  }
+  @media (max-width:700px){.how-grid{grid-template-columns:1fr;}}
+  .how-step .num{
+    font-family:'JetBrains Mono', monospace;
+    color:var(--highlight);
+    font-size:0.85rem;
+    display:block;
+    margin-bottom:8px;
+  }
+  .how-step p{opacity:0.85; font-size:0.95rem;}
+
+  /* ===== FOOTER ===== */
+  footer{
+    background:var(--ink-deep);
+    color:var(--paper);
+    padding:40px 5vw 30px;
+    font-size:0.85rem;
+  }
+  .footer-inner{
+    max-width:1180px;
+    margin:0 auto;
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:20px;
+  }
+  .footer-brand{font-size:1.1rem;}
+  .footer-brand span{color:var(--highlight);}
+  .footer-disclaimer{
+    opacity:0.65;
+    max-width:520px;
+    line-height:1.6;
+  }
+  .footer-links{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+    align-items:flex-end;
+  }
+  .footer-links a{
+    color:var(--paper);
+    opacity:0.75;
+    font-weight:600;
+    font-size:0.85rem;
+  }
+  .footer-links a:hover{opacity:1; color:var(--highlight);}
+  @media (max-width:600px){
+    .footer-links{align-items:flex-start;}
+  }
+
+  /* ===== COOKIE BANNER ===== */
+  .cookie-banner{
+    position:fixed;
+    bottom:0; left:0; right:0;
+    z-index:200;
+    background:var(--ink-deep);
+    color:var(--paper);
+    padding:16px 5vw;
+    display:none;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+    flex-wrap:wrap;
+    border-top:3px solid var(--highlight);
+    box-shadow:0 -6px 20px rgba(0,0,0,0.3);
+  }
+  .cookie-banner.is-visible{
+    display:flex;
+  }
+  .cookie-banner p{
+    font-size:0.88rem;
+    max-width:640px;
+    opacity:0.9;
+  }
+  .cookie-banner a{color:var(--highlight); text-decoration:underline;}
+  .cookie-actions{display:flex; gap:10px; flex-shrink:0;}
+  .cookie-btn{
+    background:var(--highlight);
+    color:var(--ink-deep);
+    border:none;
+    font-weight:700;
+    font-size:0.85rem;
+    padding:9px 18px;
+    border-radius:3px;
+    cursor:pointer;
+    font-family:inherit;
+  }
+  .cookie-btn:hover{background:var(--highlight-deep);}
+  .cookie-btn-secondary{
+    background:transparent;
+    color:var(--paper);
+    border:1px solid rgba(255,255,255,0.4);
+  }
+  .cookie-btn-secondary:hover{background:rgba(255,255,255,0.1);}
+
+  /* ===== city banner (placeholder for future local data) ===== */
+  .city-banner{
+    max-width:1180px;
+    margin:0 auto 40px;
+    background:#fff;
+    border:2px dashed var(--muted);
+    border-radius:6px;
+    padding:16px 20px;
+    display:flex;
+    align-items:center;
+    gap:14px;
+    font-size:0.9rem;
+    color:var(--muted);
+  }
+  .city-banner select{
+    font-family:inherit;
+    font-size:0.9rem;
+    padding:6px 10px;
+    border-radius:4px;
+    border:1px solid var(--muted);
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-logo display">HALLS<span>&</span>WALLETS</div>
+  <ul class="nav-links">
+    <li><a href="#banking">Banking</a></li>
+    <li><a href="#broadband">Broadband</a></li>
+    <li><a href="#housing">Housing</a></li>
+    <li><a href="#gyms">Gyms</a></li>
+    <li><a href="#mobile">Mobile</a></li>
+    <li><a href="#software">Software</a></li>
+    <li><a href="#travel">Travel</a></li>
+  </ul>
+</nav>
+
+<header class="hero">
+  <div class="hero-intro">
+    <span class="hero-eyebrow">UK-wide · updated regularly</span>
+    <h1 class="hero-title display">Pin down the best <em>student deals</em>, all in one place.</h1>
+    <p class="hero-sub">Student bank overdrafts, broadband, housing help, gym rates, SIM deals, student software, and travel savings — the offers worth your time, checked so you don't have to dig for them.</p>
+  </div>
+
+  <div class="board">
+    <button class="flyer" onclick="document.getElementById('banking').scrollIntoView()">
+      <span class="pin"></span>
+      <span class="flyer-icon">🏦</span>
+      <div class="flyer-title display">Banking</div>
+      <div class="flyer-count"><b>7</b> accounts & savers compared</div>
+    </button>
+    <button class="flyer" onclick="document.getElementById('broadband').scrollIntoView()">
+      <span class="pin"></span>
+      <span class="flyer-icon">📶</span>
+      <div class="flyer-title display">Broadband</div>
+      <div class="flyer-count"><b>3</b> student deals live</div>
+    </button>
+    <button class="flyer" onclick="document.getElementById('housing').scrollIntoView()">
+      <span class="pin"></span>
+      <span class="flyer-icon">🔑</span>
+      <div class="flyer-title display">Housing</div>
+      <div class="flyer-count"><b>6</b> schemes & places to search</div>
+    </button>
+    <button class="flyer" onclick="document.getElementById('gyms').scrollIntoView()">
+      <span class="pin"></span>
+      <span class="flyer-icon">🏋️</span>
+      <div class="flyer-title display">Gyms</div>
+      <div class="flyer-count"><b>5</b> student rates</div>
+    </button>
+    <button class="flyer" onclick="document.getElementById('mobile').scrollIntoView()">
+      <span class="pin"></span>
+      <span class="flyer-icon">📱</span>
+      <div class="flyer-title display">Mobile</div>
+      <div class="flyer-count"><b>4</b> SIM deals live</div>
+    </button>
+    <button class="flyer" onclick="document.getElementById('software').scrollIntoView()">
+      <span class="pin"></span>
+      <span class="flyer-icon">💻</span>
+      <div class="flyer-title display">Software</div>
+      <div class="flyer-count"><b>4</b> free/discounted tools</div>
+    </button>
+    <button class="flyer" onclick="document.getElementById('travel').scrollIntoView()">
+      <span class="pin"></span>
+      <span class="flyer-icon">🚆</span>
+      <div class="flyer-title display">Travel</div>
+      <div class="flyer-count"><b>5</b> ways to save</div>
+    </button>
+  </div>
+</header>
+
+<!-- ===== BANKING ===== -->
+<section class="section" id="banking">
+  <div class="section-head">
+    <div>
+      <div class="section-label">01 — Money in your pocket</div>
+      <h2 class="section-title display">Student bank accounts</h2>
+    </div>
+    <p class="section-note">Correction from our last check: small cash bonuses have reappeared for the 2026/27 intake at a couple of banks — updated below. Overdraft size and freebies still matter more long-term than a one-off bonus.</p>
+  </div>
+
+  <div class="city-banner">
+    📍 Deals shown are UK-wide. City-specific student banking perks (local overdraft partners, uni-linked accounts) coming soon —
+    <select disabled><option>Choose your uni city (coming soon)</option></select>
+  </div>
+
+  <div class="deals-grid">
+    <div class="deal-card">
+      <div class="deal-top">
+        <span class="deal-provider">NatWest Student Account</span>
+        <span class="deal-tag hot">Biggest overdraft</span>
+      </div>
+      <div class="deal-value">£100 bonus + £<span class="hand">3,250</span> 0% overdraft</div>
+      <p class="deal-desc">Reintroduced for 2026/27: a £100 cash bonus paid within 10 days of opening. Still has the largest interest-free overdraft ceiling of the mainstream accounts — up to £2,000 in year one (capped at £500 in your first term), rising to £3,250 from year three.</p>
+      <div class="deal-meta"><b>Watch out:</b> the full overdraft amount isn't automatic — it's subject to application and account conduct.</div>
+      <a href="https://www.natwest.com/current-accounts/student-account.html" class="deal-cta" target="_blank" rel="noopener noreferrer sponsored">View offer details →</a> <span class="ad-tag">Ad</span>
+      <span class="updated">Checked 22 July 2026 against NatWest's official student account page</span>
+    </div>
+
+    <div class="deal-card">
+      <div class="deal-top">
+        <span class="deal-provider">Santander Edge Student</span>
+        <span class="deal-tag">Best freebie</span>
+      </div>
+      <div class="deal-value">£1,500 overdraft + free Railcard</div>
+      <p class="deal-desc">£1,500 interest-free overdraft through years 1-3 (rising to £2,000 by year 5), plus a free 4-year 16-25 Railcard worth around £115. Also running a prize draw for 2026/27 switchers — every eligible new switcher gets £20 guaranteed, with a top prize of £100,000.</p>
+      <div class="deal-meta"><b>Requires:</b> paying in at least £500 every 4 months to keep the full overdraft eligible.</div>
+      <a href="https://www.santander.co.uk/personal/current-accounts/student-current-account" class="deal-cta" target="_blank" rel="noopener noreferrer sponsored">View offer details →</a> <span class="ad-tag">Ad</span>
+      <span class="updated">Checked 22 July 2026 against Santander's official student account page</span>
+    </div>
+
+    <div class="deal-card">
+      <div class="deal-top">
+        <span class="deal-provider">HSBC Student Account</span>
+        <span class="deal-tag">Guaranteed</span>
+      </div>
+      <div class="deal-value">£100 bonus + guaranteed £1,000 overdraft</div>
+      <p class="deal-desc">A newly reintroduced £100 cash incentive, plus a guaranteed 0% EAR £1,000 overdraft from day one (not subject to individual approval like some competitors), rising to £2,000 in year two and £3,000 in year three.</p>
+      <div class="deal-meta"><b>Also included:</b> a 1-year Headspace subscription and access to HSBC's 5% AER regular saver.</div>
+      <a href="https://www.hsbc.co.uk/current-accounts/products/student/" class="deal-cta" target="_blank" rel="noopener noreferrer sponsored">View offer details →</a> <span class="ad-tag">Ad</span>
+      <span class="updated">Checked 22 July 2026 against HSBC's official student account page</span>
+    </div>
+
+    <div class="deal-card">
+      <div class="deal-top">
+        <span class="deal-provider">Nationwide FlexStudent</span>
+        <span class="deal-tag recurring">Simplest terms</span>
+      </div>
+      <div class="deal-value">£1,000 → £3,000 by year 3</div>
+      <p class="deal-desc">A clear, no-fee overdraft that steps up predictably: £1,000 in year one, £2,000 in year two, £3,000 in year three — consistently well-rated for customer satisfaction. No cash bonus, but no catch either.</p>
+      <div class="deal-meta"><b>Best for:</b> students who want the terms spelled out plainly rather than "subject to status" ambiguity.</div>
+      <a href="https://www.nationwide.co.uk/products/current-accounts/flexstudent/overview/" class="deal-cta" target="_blank" rel="noopener noreferrer sponsored">View offer details →</a> <span class="ad-tag">Ad</span>
+      <span class="updated">Checked 22 July 2026 against Nationwide's official student account page</span>
+    </div>
+  </div>
+
+  <div class="section-head" style="margin-top:48px;">
+    <div>
+      <div class="section-label">01b — A different kind of account</div>
+      <h2 class="section-title display" style="font-size:1.5rem;">Student savings accounts</h2>
+    </div>
+    <p class="section-note">Current accounts are for spending; these are for anything you can afford to set aside. Regular savers pay the best headline rates but cap what you can pay in each month.</p>
+  </div>
+
+  <div class="deals-grid">
+    <div class="deal-card">
+      <div class="deal-top">
+        <span class="deal-provider">First Direct Regular Saver</span>
+        <span class="deal-tag hot">Top rate</span>
+      </div>
+      <div class="deal-value">7.00% AER fixed</div>
+      <p class="deal-desc">The highest fixed rate on the market right now, with a monthly deposit allowance up to £300 — strong if you have steady part-time income to set aside.</p>
+      <div class="deal-meta"><b>Needs:</b> a First Direct current account to open one.</div>
+      <a href="https://www.firstdirect.com/" class="deal-cta" target="_blank" rel="noopener noreferrer">Read the guide →</a>
+      <span class="updated">Checked 22 July 2026 — rates are variable, always confirm current AER before opening</span>
+    </div>
+
+    <div class="deal-card">
+      <div class="deal-top">
+        <span class="deal-provider">Nationwide Flex Regular Saver</span>
+        <span class="deal-tag">No premium account needed</span>
+      </div>
+      <div class="deal-value">6.50% AER</div>
+      <p class="deal-desc">Works alongside your existing FlexStudent account rather than requiring a separate premium tier, with up to three penalty-free withdrawals during the term.</p>
+      <div class="deal-meta"><b>Good for:</b> students who already bank with Nationwide and want a saver without switching.</div>
+      <a href="https://www.nationwide.co.uk/savings/" class="deal-cta" target="_blank" rel="noopener noreferrer">Read the guide →</a>
+      <span class="updated">Checked 22 July 2026 — rates are variable, always confirm current AER before opening</span>
+    </div>
+
+    <div class="deal-card">
+      <div class="deal-top">
+        <span class="deal-provider">Santander Regular Saver</span>
+        <span class="deal-tag recurring">Linked bonus</span>
+      </div>
+      <div class="deal-value">Up to 8.00% AER</div>
+      <p class="deal-desc">Includes a 5% bonus for the first 12 months if you hold a linked Santander student current account, on deposits up to £200/month.</p>
+      <div class="deal-meta"><b>Watch out:</b> the bonus rate typically only lasts 12 months — set a reminder to review it when it ends.</div>
+      <a href="https://www.santander.co.uk/personal/savings" class="deal-cta" target="_blank" rel="noopener noreferrer sponsored">View offer details →</a> <span class="ad-tag">Ad</span>
+      <span class="updated">Checked 22 July 2026 — rates are variable, always confirm current AER before opening</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== BROADBAND ===== -->
+<section class="section" id="broadband">
+  <div class="section-head">
+    <div>
+      <div class="section-label">02 — Getting online</div>
+      <h2 class="section-title display">Student broadband deals</h2>
+    </div>
+    <p class="section-note">Matching your contract length to your tenancy matters more than chasing the cheapest headline price — a longer contract can still cost more overall if you're paying for months you're not there.</p>
+  </div>
+
+  <div class="deals-grid">
+    <div class="deal-card">
+      <div class="deal-top">
+        <span class="deal-provider">Virgin Media Student</span>
+        <span class="deal-tag hot">12-month term</span>
+      </div>
+      <div class="deal-value">From £24/mo (M125)</div>
+      <p class="deal-desc">Dedicated 12-month student contracts with £0 setup fees, matching a typical September–June/July tenancy. 132Mbps entry tier is comfortable for a shared house of 3-5 streaming and gaming at once.</p>
+      <div class="deal-meta"><b>Also watch for:</b> occasional 9-month "freshers" deals appearing August–October — not guaranteed every year, so check when you're actually moving in.</div>
+      <a href="https://www.virginmedia.com/broadband/student-broadband" class="deal-cta" target="_blank" rel="noopener noreferrer sponsored">View offer details →</a> <span class="ad-tag">Ad</span>
+      <span class="updated">Checked 22 July 2026 against Virgin Media's student deals page</span>
+    </div>
+
+    <div class="deal-card">
+      <div class="deal-top">
+        <span class="deal-provider">Three 5G Home Broadband</span>
+        <span class="deal-tag recurring">Monthly rolling</span>
+      </div>
+      <div class="deal-value">No fixed contract</div>
+      <p class="deal-desc">Genuinely rolling monthly plan with no engineer install needed — plug in and go. Best flexibility of any option here if your accommodation plans aren't fully locked in yet.</p>
+      <div class="deal-meta"><b>Trade-off:</b> speed depends on 5G signal strength at your address — worth checking coverage before relying on it.</div>
+      <a href="https://www.three.co.uk/5g-broadband" class="deal-cta" target="_blank" rel="noopener noreferrer sponsored">View offer details →</a> <span class="ad-tag">Ad</span>
+      <span class="updated">Checked 22 July 2026 against Three's broadband page</span>
+    </div>
+
+    <div class="deal-card">
+      <div class="deal-top">
+        <span class="deal-provider">Hyperoptic</span>
+        <span class="deal-tag">Rolling, gamer-friendly</span>
+      </div>
+      <div class="deal-value">Symmetrical up/download</div>
+      <p class="deal-desc">Also offers a genuine monthly rolling contract, with equal upload and download speeds — noticeably better than most providers for uploading coursework, streaming, or online gaming.</p>
+      <div class="deal-meta"><b>Check first:</b> only available in Hyperoptic-enabled buildings — confirm your address is covered before counting on it.</div>
+      <a href="https://www.hyperoptic.com/" class="deal-cta" target="_blank" rel="noopener noreferrer sponsored">View offer details →</a> <span class="ad-tag">Ad</span>
+      <span class="updated">Checked 22 July 2026 against Hyperoptic's coverage/plans page</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== HOUSING ===== -->
+<section class="section" id="housing">
+  <div class="section-head">
+    <div>
+      <div class="section-label">03 — Sorting a place to live</div>
+      <h2 class="section-title display">Housing help & schemes</h2>
+    </div>
+    <p class="section-note">Big legal changes landed this year — the Renters' Rights Act reshaped private student tenancies from 1 May 2026, so this section leans on what actually changed.</p>
+  </div>
+
+  <div class="deals-grid">
+    <div class="deal-card">
+      <div class="deal-top">
+        <span class="deal-provider">Renters' Rights Act 2026</span>
+        <span class="deal-tag hot">Know your rights</span>
+      </div>
+      <div class="deal-value">Fixed-term tenancies scrapped</div>
+      <p class="deal-desc">From 1 May 2026, private tenancies (not university halls or PBSA) became rolling "periodic" tenancies with no fixed end date. You can leave with two months' written notice — no more being locked into paying for an empty room over summer if you time it right.</p>
+      <div class="deal-meta"><b>Doesn't apply to:</b> university-owned halls or purpose-built student accommodation (PBSA) — they're exempt and can still use fixed terms.</div>
+      <a href="https://www.nus.org.uk/rra-know-your-rights" class="deal-cta" target="_blank" rel="noopener noreferrer">Read the guide →</a>
+      <span class="updated">Checked 22 July 2026 against NUS UK's Renters' Rights Act guidance</span>
+    </div>
+
+    <div class="deal-card">
+      <div class="deal-top">
+        <span class="deal-provider">Guarantor schemes</span>
+        <span class="deal-tag">No UK guarantor?</span>
+      </div>
+      <div class="deal-value">From ~5% of annual rent</div>
+      <p class="deal-desc">Services like Housing Hand or RentGuarantor stand in when parents can't act as a UK guarantor (common for international/estranged students). University-partnered rates are often cheaper than going direct — some unis cover the fee entirely for care-experienced or estranged students.</p>
+      <div class="deal-meta"><b>Check first:</b> ask your university's accommodation office if they already have a discounted guarantor partnership before paying full price elsewhere.</div>
+      <a href="https://housinghand.com/" class="deal-cta" target="_blank" rel="noopener noreferrer sponsored">View offer details →</a> <span class="ad-tag">Ad</span>
+      <span class="updated">Checked 22 July 2026 against Housing Hand's published pricing</span>
+    </div>
+
+    <div class="deal-card">
+      <div class="deal-top">
+        <span class="deal-provider">Deposit rules & protection</span>
+        <span class="deal-tag recurring">It's the law</span>
+      </div>
+      <div class="deal-value">Capped at 5 weeks' rent</div>
+      <p class="deal-desc">For annual rent under £50,000, your deposit is legally capped at 5 weeks' rent, and a holding deposit at 1 week's rent. Your landlord must protect your deposit in a government-approved scheme — if they don't, you may be entitled to compensation.</p>
+      <div class="deal-meta"><b>Also new:</b> landlords can no longer ask for more than one month's rent in advance under the Renters' Rights Act.</div>
+      <a href="https://www.gov.uk/tenancy-deposit-protection" class="deal-cta" target="_blank" rel="noopener noreferrer">Read the guide →</a>
+      <span class="updated">Checked 22 July 2026 against NUS UK's Renters' Rights Act guidance</span>
+    </div>
+  </div>
+
+  <div class="section-head" style="margin-top:48px;">
+    <div>
+      <div class="section-label">03b — Actually finding the place</div>
+      <h2 class="section-title display" style="font-size:1.5rem;">Where to search</h2>
+    </div>
+    <p class="section-note">Search platforms let you compare across many providers; single-provider sites only show their own buildings.</p>
+  </div>
+
+  <div class="deals-grid">
+    <div class="deal-card">
+      <div class="deal-top">
+        <span class="deal-provider">StuRents</span>
+        <span class="deal-tag hot">Widest choice</span>
+      </div>
+      <div class="deal-value">Halls + houses compared</div>
+      <p class="deal-desc">A dedicated student property search engine covering both purpose-built halls and private house shares across the UK, listing hundreds of thousands of bedspaces from many different providers side by side.</p>
+      <div class="deal-meta"><b>Good for:</b> comparing multiple providers fairly before committing to one.</div>
+      <a href="https://www.sturents.com/" class="deal-cta" target="_blank" rel="noopener noreferrer">Read the guide →</a>
+      <span class="updated">Checked 22 July 2026</span>
+    </div>
+
+    <div class="deal-card">
+      <div class="deal-top">
+        <span class="deal-provider">SpareRoom</span>
+        <span class="deal-tag">Best for solo rooms</span>
+      </div>
+      <div class="deal-value">Find a room or flatmates</div>
+      <p class="deal-desc">Particularly useful if you don't have a group of friends to rent with, or are joining an existing flatshare mid-way through the year.</p>
+      <div class="deal-meta"><b>Take care:</b> it's an open listing site, so verify the advertiser and never send money before viewing — scam risk is higher here than on managed platforms.</div>
+      <a href="https://www.spareroom.co.uk/student-accommodation" class="deal-cta" target="_blank" rel="noopener noreferrer">Read the guide →</a>
+      <span class="updated">Checked 22 July 2026</span>
+    </div>
+
+    <div class="deal-card">
+      <div class="deal-top">
+        <span class="deal-provider">Rightmove Student Accommodation</span>
+        <span class="deal-tag recurring">Agent-listed houses</span>
+      </div>
+      <div class="deal-value">Widest property listings</div>
+      <p class="deal-desc">A dedicated student section of the UK's biggest property portal — strong for finding agent-listed private houses in a specific area near your university.</p>
+      <div class="deal-meta"><b>Good for:</b> comparing local letting agents against each other in one place.</div>
+      <a href="https://www.rightmove.co.uk/student-accommodation.html" class="deal-cta" target="_blank" rel="noopener noreferrer">Read the guide →</a>
+      <span class="updated">Checked 22 July 2026</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== GYMS ===== -->
+<section class="section" id="gyms">
+  <div class="section-head">
+    <div>
+      <div class="section-label">04 — Staying active without breaking the bank</div>
+      <h2 class="section-title display">Student gym rates</h2>
+    </div>
+    <p class="section-note">Flexible, no-contract memberships tend to suit student schedules and budgets far better than annual plans.</p>
+  </div>
+
+  <div class="deals-grid">
+    <div class="deal-card">
+      <div class="deal-top">
+        <span class="deal-provider">PureGym Student</span>
+        <span class="deal-tag recurring">No joining fee</span>
+      </div>
+      <div class="deal-value">30% off 6-12 month plans</div>
+      <p class="deal-desc">From £17.99/month standard. Students get 30% off fixed-term memberships (6, 9 or 12 months) via UNiDAYS, or 10% off the first 6 months if you'd rather keep the flexible rolling monthly plan.</p>
+      <div class="deal-meta"><b>Needs:</b> UNiDAYS or Student Beans verification with a university email at signup.</div>
+      <a href="https://www.puregym.com/student-discount/" class="deal-cta" target="_blank" rel="noopener noreferrer sponsored">View offer details →</a> <span class="ad-tag">Ad</span>
+      <span class="updated">Checked 22 July 2026 against PureGym's student offer page</span>
+    </div>
+
+    <div class="deal-card">
+      <div class="deal-top">
+        <span class="deal-provider">The Gym Group</span>
+        <span class="deal-tag">Off-peak from £13.99</span>
+      </div>
+      <div class="deal-value">Up to 25% off student plans</div>
+      <p class="deal-desc">Off-Peak membership (mid-morning to mid-afternoon plus late nights) is the cheapest way in at around £13.99/month. Dedicated Student Saver plans (3/6/9/12-month) get up to 25% off through student verification platforms.</p>
+      <div class="deal-meta"><b>Watch out:</b> a £10 joining fee applies to Off-Peak membership specifically.</div>
+      <a href="https://www.thegymgroup.com/" class="deal-cta" target="_blank" rel="noopener noreferrer sponsored">View offer details →</a> <span class="ad-tag">Ad</span>
+      <span class="updated">Checked 22 July 2026 against The Gym Group's student offer page</span>
+    </div>
+
+    <div class="deal-card">
+      <div class="deal-top">
+        <span class="deal-provider">University sports centre</span>
+        <span class="deal-tag hot">Often cheapest</span>
+      </div>
+      <div class="deal-value">Check first</div>
+      <p class="deal-desc">Your own uni's sports centre membership is very often cheaper than any commercial gym, and includes classes/pools.</p>
+      <div class="deal-meta"><b>Don't skip this:</b> the obvious option gets overlooked the most.</div>
+      <a href="https://www.bucs.org.uk/" class="deal-cta" target="_blank" rel="noopener noreferrer">Read the guide →</a>
+      <span class="updated">General guidance — check your specific university's current pricing</span>
+    </div>
+
+    <div class="deal-card">
+      <div class="deal-top">
+        <span class="deal-provider">Virgin Active</span>
+        <span class="deal-tag">Premium option</span>
+      </div>
+      <div class="deal-value">Discounted 18-25 membership</div>
+      <p class="deal-desc">No dedicated "student" tier, but select clubs offer a discounted 6-month membership for 18-25 year-olds. Pricier than the budget chains, but includes pools, spas, and studio classes the cheaper gyms don't have.</p>
+      <div class="deal-meta"><b>Worth it if:</b> you specifically want pool access or premium classes — skip it if you just want a treadmill and weights.</div>
+      <a href="https://www.virginactive.co.uk/" class="deal-cta" target="_blank" rel="noopener noreferrer sponsored">View offer details →</a> <span class="ad-tag">Ad</span>
+      <span class="updated">Checked 22 July 2026 against Virgin Active's membership page</span>
+    </div>
+
+    <div class="deal-card">
+      <div class="deal-top">
+        <span class="deal-provider">Local council leisure centres</span>
+        <span class="deal-tag recurring">Often overlooked</span>
+      </div>
+      <div class="deal-value">Check locally</div>
+      <p class="deal-desc">Council-run centres (often branded Better or GLL) frequently beat commercial gym prices for students, and include pools and classes as standard.</p>
+      <div class="deal-meta"><b>Good for:</b> anyone prioritising price over 24/7 opening hours.</div>
+      <a href="https://www.better.org.uk/" class="deal-cta" target="_blank" rel="noopener noreferrer">Read the guide →</a>
+      <span class="updated">General guidance — pricing varies by council area</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MOBILE & SIM ===== -->
+<section class="section" id="mobile">
+  <div class="section-head">
+    <div>
+      <div class="section-label">05 — Staying connected</div>
+      <h2 class="section-title display">Mobile & SIM-only deals</h2>
+    </div>
+    <p class="section-note">SIM-only plans usually beat a full contract for students — no handset markup, and far easier to cancel or switch.</p>
+  </div>
+
+  <div class="deals-grid">
+    <div class="deal-card">
+      <div class="deal-top">
+        <span class="deal-provider">giffgaff</span>
+        <span class="deal-tag recurring">No contract</span>
+      </div>
+      <div class="deal-value">From £6/mo (20GB at £12)</div>
+      <p class="deal-desc">Genuinely rolling monthly "goodybags" with no exit fees, refreshed in Feb 2026: £6 for a light starter tier, up to 20GB on the popular £12 bag, or unlimited data at £35. Change your bag every month as your usage changes.</p>
+      <div class="deal-meta"><b>Bonus:</b> refer a friend and you can both earn up to £15 in credit.</div>
+      <a href="https://www.giffgaff.com/sim-only" class="deal-cta" target="_blank" rel="noopener noreferrer sponsored">View offer details →</a> <span class="ad-tag">Ad</span>
+      <span class="updated">Checked 22 July 2026 against giffgaff's current goodybag pricing</span>
+    </div>
+
+    <div class="deal-card">
+      <div class="deal-top">
+        <span class="deal-provider">Three Student Saver SIM</span>
+        <span class="deal-tag hot">10-month term</span>
+      </div>
+      <div class="deal-value">Unlimited calls, texts & data</div>
+      <p class="deal-desc">Preloaded with unlimited UK calls, texts, and data for 10 months — deliberately matching a typical academic year, so you're not paying for data you don't need over summer.</p>
+      <div class="deal-meta"><b>Also:</b> a general STUDY20 code gives 20% off standard Three airtime and broadband plans if the Saver SIM isn't the right fit.</div>
+      <a href="https://www.three.co.uk/offers/student-discount" class="deal-cta" target="_blank" rel="noopener noreferrer sponsored">View offer details →</a> <span class="ad-tag">Ad</span>
+      <span class="updated">Checked 22 July 2026 against Three's student discount page</span>
+    </div>
+
+    <div class="deal-card">
+      <div class="deal-top">
+        <span class="deal-provider">Lebara</span>
+        <span class="deal-tag hot">Best for calling abroad</span>
+      </div>
+      <div class="deal-value">100GB for £18/mo</div>
+      <p class="deal-desc">Runs on the Vodafone network with genuinely large data bundles at low prices, plus bundled international minutes to 50+ countries — a strong pick for international students calling home regularly.</p>
+      <div class="deal-meta"><b>Also:</b> half-price on SIM-only plans for the first 3 months via UNiDAYS or Student Beans.</div>
+      <a href="https://www.lebara.co.uk/" class="deal-cta" target="_blank" rel="noopener noreferrer sponsored">View offer details →</a> <span class="ad-tag">Ad</span>
+      <span class="updated">Checked 22 July 2026 against Lebara's SIM-only plans page</span>
+    </div>
+
+    <div class="deal-card">
+      <div class="deal-top">
+        <span class="deal-provider">Family/group SIM sharing</span>
+        <span class="deal-tag">Explainer</span>
+      </div>
+      <div class="deal-value">Split the cost</div>
+      <p class="deal-desc">Several networks let you add SIMs to a family/group plan — sharing a plan with flatmates or family can undercut any individual student deal.</p>
+      <div class="deal-meta"><b>Worth checking:</b> compare the per-person cost against a solo SIM-only plan before committing.</div>
+      <a href="https://www.uswitch.com/mobiles/" class="deal-cta" target="_blank" rel="noopener noreferrer">Read the guide →</a>
+      <span class="updated">General guidance — compare current per-person pricing at signup</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SOFTWARE & SUBSCRIPTIONS ===== -->
+<section class="section" id="software">
+  <div class="section-head">
+    <div>
+      <div class="section-label">06 — Tools for actual studying</div>
+      <h2 class="section-title display">Student software & subscriptions</h2>
+    </div>
+    <p class="section-note">Some of the best value on this whole page is free — these are the ones students most often don't realise they're entitled to.</p>
+  </div>
+
+  <div class="deals-grid">
+    <div class="deal-card">
+      <div class="deal-top">
+        <span class="deal-provider">GitHub Student Developer Pack</span>
+        <span class="deal-tag hot">Free</span>
+      </div>
+      <div class="deal-value">£0 — $200+ in tools</div>
+      <p class="deal-desc">One verification unlocks GitHub Pro, a free JetBrains all-products licence, $200 DigitalOcean credit, and $100 Azure credit plus 25+ Azure services — genuinely one of the best-kept secrets for CS/engineering students.</p>
+      <div class="deal-meta"><b>Current caveat:</b> GitHub paused new free Copilot Student sign-ups in April 2026 due to compute demand — check live status before counting on that specific perk.</div>
+      <a href="https://education.github.com/pack" class="deal-cta" target="_blank" rel="noopener noreferrer">View offer details →</a>
+      <span class="updated">Checked 22 July 2026 against GitHub Education's pack page</span>
+    </div>
+
+    <div class="deal-card">
+      <div class="deal-top">
+        <span class="deal-provider">Microsoft Office 365 Education</span>
+        <span class="deal-tag recurring">Often free</span>
+      </div>
+      <div class="deal-value">£0 via your uni</div>
+      <p class="deal-desc">Most UK universities already include a free Office 365 licence as part of your student account — worth checking before paying for a personal subscription.</p>
+      <div class="deal-meta"><b>Check first:</b> your university's IT services page, before buying anything.</div>
+      <a href="https://www.microsoft.com/en-us/education/products/office" class="deal-cta" target="_blank" rel="noopener noreferrer">Read the guide →</a>
+      <span class="updated">General guidance — confirm your specific university includes this</span>
+    </div>
+
+    <div class="deal-card">
+      <div class="deal-top">
+        <span class="deal-provider">Spotify Premium Student</span>
+        <span class="deal-tag">45% off</span>
+      </div>
+      <div class="deal-value">£5.99/mo (vs £10.99)</div>
+      <p class="deal-desc">A free first month, then £5.99/month instead of the standard £10.99 — available for up to 4 years, with annual re-verification of student status via SheerID.</p>
+      <div class="deal-meta"><b>Good to know:</b> cancel anytime, no long tie-in.</div>
+      <a href="https://www.spotify.com/uk/student/" class="deal-cta" target="_blank" rel="noopener noreferrer sponsored">View offer details →</a> <span class="ad-tag">Ad</span>
+      <span class="updated">Checked 22 July 2026 against Spotify's official student page</span>
+    </div>
+
+    <div class="deal-card">
+      <div class="deal-top">
+        <span class="deal-provider">Amazon Prime Student</span>
+        <span class="deal-tag">50% off</span>
+      </div>
+      <div class="deal-value">£4.49/mo after 6-month trial</div>
+      <p class="deal-desc">The longest free trial Amazon offers anywhere — 6 months free, then half-price at £4.49/month or £47.49/year (vs £8.99/month standard), for up to 4 years while you're a student.</p>
+      <div class="deal-meta"><b>Includes:</b> the same fast delivery and Prime Video access as full Prime.</div>
+      <a href="https://www.amazon.co.uk/amazonprime?primeCampaignId=studentWlpPrimeRedir&linkCode=ll2&tag=hallsandwalle-21&linkId=0451a0e16f54017787bc84b1fb6ed367&ref_=as_li_ss_tl" class="deal-cta" target="_blank" rel="noopener noreferrer sponsored">View offer details →</a> <span class="ad-tag">Ad</span>
+      <span class="updated">Checked 22 July 2026 against Amazon UK's official student page · As an Amazon Associate I earn from qualifying purchases.</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TRAVEL ===== -->
+<section class="section" id="travel">
+  <div class="section-head">
+    <div>
+      <div class="section-label">07 — Getting around</div>
+      <h2 class="section-title display">Travel & Railcard savings</h2>
+    </div>
+    <p class="section-note">Small upfront cost, but these usually pay for themselves within a handful of trips home.</p>
+  </div>
+
+  <div class="deals-grid">
+    <div class="deal-card">
+      <div class="deal-top">
+        <span class="deal-provider">16-25 Railcard</span>
+        <span class="deal-tag hot">Pays for itself fast</span>
+      </div>
+      <div class="deal-value">£35/year → 1/3 off rail fares</div>
+      <p class="deal-desc">£35 for a year (or £80 for three), saving a third off most rail fares across Great Britain. National Rail's own figures put the average saving at around £212 a year — so it pays for itself after just a couple of return trips home.</p>
+      <div class="deal-meta"><b>Also covers:</b> a linked discount on Oyster pay-as-you-go fares if you register it in London.</div>
+      <a href="https://www.16-25railcard.co.uk/" class="deal-cta" target="_blank" rel="noopener noreferrer sponsored">View offer details →</a> <span class="ad-tag">Ad</span>
+      <span class="updated">Checked 22 July 2026 against National Rail's official Railcard page</span>
+    </div>
+
+    <div class="deal-card">
+      <div class="deal-top">
+        <span class="deal-provider">National Express Young Persons Coachcard</span>
+        <span class="deal-tag">Budget option</span>
+      </div>
+      <div class="deal-value">£30/year → 1/3 off coach fares</div>
+      <p class="deal-desc">Cheaper upfront than the Railcard. Covers a third off Standard and Fully Flexible fares, plus £15 day returns anywhere in the UK on Tuesdays-Thursdays, and 15% off travel to events and festivals.</p>
+      <div class="deal-meta"><b>Trade-off:</b> journey times are typically much longer than rail.</div>
+      <a href="https://www.nationalexpress.com/en/offers/coachcards/young-person" class="deal-cta" target="_blank" rel="noopener noreferrer sponsored">View offer details →</a> <span class="ad-tag">Ad</span>
+      <span class="updated">Checked 22 July 2026 against National Express's official Coachcard page</span>
+    </div>
+
+    <div class="deal-card">
+      <div class="deal-top">
+        <span class="deal-provider">Local bus student tickets</span>
+        <span class="deal-tag recurring">Check locally</span>
+      </div>
+      <div class="deal-value">Varies by city</div>
+      <p class="deal-desc">Most university cities have a discounted student bus pass through the local operator — often the single biggest saving for day-to-day getting around campus.</p>
+      <div class="deal-meta"><b>Coming soon:</b> city-specific bus pass links once local data is added.</div>
+      <a href="https://www.traveline.info/" class="deal-cta" target="_blank" rel="noopener noreferrer">Read the guide →</a>
+      <span class="updated">General guidance — check your local operator's current student fares</span>
+    </div>
+
+    <div class="deal-card">
+      <div class="deal-top">
+        <span class="deal-provider">StudentUniverse (now BYOjet for Students)</span>
+        <span class="deal-tag hot">Flying home / abroad</span>
+      </div>
+      <div class="deal-value">Discounted student fares</div>
+      <p class="deal-desc">Recently rebranded from StudentUniverse to BYOjet for Students. Negotiates student and youth-only rates on flights, hotels, and tours — particularly useful if you're flying internationally for term breaks or study abroad.</p>
+      <div class="deal-meta"><b>Needs:</b> verification via a school email or student ID; also open to 18-25 year-olds without student status.</div>
+      <a href="https://www.studentuniverse.com/" class="deal-cta" target="_blank" rel="noopener noreferrer sponsored">View offer details →</a> <span class="ad-tag">Ad</span>
+      <span class="updated">Checked 22 July 2026 — note the recent BYOjet rebrand when verifying links</span>
+    </div>
+
+    <div class="deal-card">
+      <div class="deal-top">
+        <span class="deal-provider">Skyscanner</span>
+        <span class="deal-tag recurring">Free price alerts</span>
+      </div>
+      <div class="deal-value">Compare, don't guess</div>
+      <p class="deal-desc">Not student-specific, but the "Whole Month" view and price alerts make it easy to spot the cheapest days to fly home — worth using alongside any student travel site rather than instead of it.</p>
+      <div class="deal-meta"><b>Good habit:</b> set a price alert as soon as term dates are confirmed, rather than searching last-minute.</div>
+      <a href="https://www.skyscanner.net/" class="deal-cta" target="_blank" rel="noopener noreferrer">Read the guide →</a>
+      <span class="updated">Checked 22 July 2026</span>
+    </div>
+  </div>
+</section>
+
+<div class="how">
+  <h3 class="how-title display">How this board stays trustworthy</h3>
+  <div class="how-grid">
+    <div class="how-step">
+      <span class="num mono">01</span>
+      <p>Every deal is checked against the provider's own terms, not copied from other comparison sites.</p>
+    </div>
+    <div class="how-step">
+      <span class="num mono">02</span>
+      <p>We flag catches — fees, exclusions, deadlines — in plain language, not buried small print.</p>
+    </div>
+    <div class="how-step">
+      <span class="num mono">03</span>
+      <p>Some links are affiliate links, which may earn a commission — it never affects which deals we list or how we rank them.</p>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand display">HALLS<span>&</span>WALLETS</div>
+      <p class="footer-disclaimer">This site provides general information about publicly available offers and is not financial advice. Terms, eligibility, and bonus amounts change frequently and are set by each provider — always check directly with them before applying. We may earn a commission from some links, at no extra cost to you.</p>
+    </div>
+    <div class="footer-links">
+      <a href="privacy.html">Privacy &amp; Cookies</a>
+      <a href="mailto:hello@hallsandwallets.co.uk">Contact us</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== COOKIE CONSENT BANNER ===== -->
+<div id="cookie-banner" class="cookie-banner" role="dialog" aria-label="Cookie notice">
+  <p>We use a small number of cookies to understand site traffic. No personal data is sold. See our <a href="privacy.html">Privacy &amp; Cookies</a> page for details.</p>
+  <div class="cookie-actions">
+    <button id="cookie-decline" class="cookie-btn cookie-btn-secondary">Decline</button>
+    <button id="cookie-accept" class="cookie-btn">Accept</button>
+  </div>
+</div>
+
+<script>
+  (function(){
+    var KEY = 'hw_cookie_choice';
+    var banner = document.getElementById('cookie-banner');
+    var stored = null;
+    try { stored = localStorageSafeGet(KEY); } catch(e) {}
+
+    function localStorageSafeGet(k){
+      // Guarded access: some browsers/privacy modes block localStorage entirely
+      try { return window.localStorage.getItem(k); } catch(e){ return null; }
+    }
+    function localStorageSafeSet(k, v){
+      try { window.localStorage.setItem(k, v); } catch(e){}
+    }
+
+    stored = localStorageSafeGet(KEY);
+    if(!stored){
+      banner.classList.add('is-visible');
+    }
+
+    document.getElementById('cookie-accept').addEventListener('click', function(){
+      localStorageSafeSet(KEY, 'accepted');
+      banner.classList.remove('is-visible');
+      // If/when analytics is added, initialise it here, e.g.:
+      // loadAnalytics();
+    });
+    document.getElementById('cookie-decline').addEventListener('click', function(){
+      localStorageSafeSet(KEY, 'declined');
+      banner.classList.remove('is-visible');
+    });
+  })();
+</script>
+
+</body>
+</html>
